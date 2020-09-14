@@ -1,0 +1,64 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 11px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+#form-nuevas-fronteras-div {
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+#msj-after-form-submit {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+#form-nuevas-fronteras div + div {
+    margin-top: 1em;
+}
+#msj-after-form-nuevas-fronteras p {
+    text-align: center;
+}
+input, select, textarea {
+    display: block;
+    width: 90%;
+    border: 1px solid #999;
+}
+.btn-submit-nuevas-fronteras {
+    width: 90%;
+}
+.msj {
+    width: 90%;
+    text-align: center;
+}
+.msj-google-politicas {
+    width: 90%;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 0;
+    padding-top: 0;
+}
+#logo-principal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.displayNone{
+    display: none;
+}
+.g-recaptcha{
+    transform:scale(0.73);
+    transform-origin:0 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
