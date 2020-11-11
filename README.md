@@ -1,3 +1,5 @@
 ## BUSCA TU AREPA
 
-<p>Repositorio público</p>
+# Repositorio público
+
+Proyecto fuera de mantenimiento
