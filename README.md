@@ -1,5 +1,3 @@
-## BUSCA TU AREPA
+# BUSCA TU AREPA
 
-# Repositorio público
-
-Proyecto fuera de mantenimiento
+Repo out of maintenance
