@@ -1,3 +1,21 @@
-# BUSCA TU AREPA
+## BUSCA TU AREPA
 
-Repo out of maintenance
+Web Application that locates Venezuelan restaurants and locals. in differents countries.
+
+Database build with help of [Gabriel Lovera](https://www.linkedin.com/in/loveragabriel/)
+
+### Containerization
+
+This web application has been dockerized, here you will find the correspondent docker compose file in the root folder, from there, run the following command:
+
+```
+docker compose up -d
+```
+
+For stop the services, run:
+
+```
+docker compose down
+```
+
+The web application is available in localhost:8181/buscatuarepa.html

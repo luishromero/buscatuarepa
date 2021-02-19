@@ -1,0 +1,22 @@
+version: "3.0"
+services:
+  mysqlbta:
+    build:
+      context: db
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - MYSQL_USER=docker
+      - MYSQL_ROOT_PASSWORD=docker
+      - MYSQL_DATABASE=buscatuarepa
+    restart: on-failure
+  webappbta:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8181:80"
+    depends_on:
+      - "mysqlbta"
+    restart: on-failure
