@@ -1,6 +1,6 @@
 ## BUSCA TU AREPA
 
-Web Application that locates Venezuelan restaurants and locals. in differents countries.
+Web Application that locates Venezuelan restaurants and locals in differents countries.
 
 Database build with help of [Gabriel Lovera](https://www.linkedin.com/in/loveragabriel/)
 
