@@ -6,7 +6,7 @@ WORKDIR $APP_HOME
 COPY . .
 RUN mvn clean install
 
-FROM openjdk:11
+FROM openjdk:11-jre-slim-buster
 
 ENV APP_HOMEJDK /app
 RUN mkdir -p $APP_HOMEJDK

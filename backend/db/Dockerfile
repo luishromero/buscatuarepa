@@ -1,9 +1,4 @@
-FROM mysql:5.6
-
-ENV MYSQL_ROOT_PASSWORD=rootpassword
-ENV MYSQL_ROOT_USER=docker
-ENV MYSQL_PASSWORD=docker
-ENV MYSQL_DATABASE=buscatuarepa
+FROM postgres:9.6-alpine
 
 ADD scripts /docker-entrypoint-initdb.d
 
