@@ -17,19 +17,21 @@ import com.buscatuarepa.api.models.SugerenciaArgentina;
 import com.buscatuarepa.api.models.SugerenciaChile;
 import com.buscatuarepa.api.models.SugerenciaMexico;
 import com.buscatuarepa.api.models.SugerenciaUruguay;
-import com.buscatuarepa.api.repositories.LocalsRepository;
-import com.buscatuarepa.api.repositories.NuevasFronterasRepository;
 import com.buscatuarepa.api.repositories.DeliveryRepository;
 import com.buscatuarepa.api.repositories.EdicionArgentinaRepository;
 import com.buscatuarepa.api.repositories.EdicionChileRepository;
 import com.buscatuarepa.api.repositories.EdicionMexicoRepository;
 import com.buscatuarepa.api.repositories.EdicionUruguayRepository;
+import com.buscatuarepa.api.repositories.LocalsRepository;
+import com.buscatuarepa.api.repositories.NuevasFronterasRepository;
 import com.buscatuarepa.api.repositories.SugerenciaArgentinaRepository;
 import com.buscatuarepa.api.repositories.SugerenciaChileRepository;
 import com.buscatuarepa.api.repositories.SugerenciaMexicoRepository;
 import com.buscatuarepa.api.repositories.SugerenciaUruguayRepository;
 import com.buscatuarepa.api.utils.Constant;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -62,8 +64,10 @@ public class BuscatuArepaService {
   @Autowired
   NuevasFronterasRepository nuevasFronterasRepository;
 
-  public List<LocalDTO> getLocals(String city) {
+  public JSONObject getLocals(String city) {
+
     List<LocalDTO> localList = new ArrayList<>();
+
     if (city.equals(Constant.BUENOSAIRESTABLE)) {
       localList = localsRepository.getBuenosAiresLocals();
     }
@@ -82,7 +86,59 @@ public class BuscatuArepaService {
     if (city.equals(Constant.MONTEVIDEOTABLE)) {
       localList = localsRepository.getMontevideoLocals();
     }
-    return localList;
+
+    JSONObject geojson = new JSONObject();
+    JSONArray featuresArray = new JSONArray();
+
+    for (LocalDTO localDTO : localList) {
+
+      JSONObject jsonObject = new JSONObject();
+      JSONObject geometry = new JSONObject();
+      JSONArray coordinates = new JSONArray();
+
+      coordinates.put(localDTO.getX());
+      coordinates.put(localDTO.getY());
+      geometry.put("coordinates", coordinates);
+      geometry.put("type", "Point");
+
+      JSONObject properties = new JSONObject();
+
+      properties.put("COD", localDTO.getCod());
+      properties.put("NOMBRE", localDTO.getNombre());
+      properties.put("BARRIO", localDTO.getBarrio());
+      properties.put("CALLE", localDTO.getCalle());
+      properties.put("ALTURA", localDTO.getAltura());
+      properties.put("LOCAL", localDTO.getLocal());
+      properties.put("DESCRIPCION", localDTO.getDescripcion());
+      properties.put("CATEGORIA", localDTO.getCategoria());
+      properties.put("ETIQUETAS", localDTO.getEtiquetas());
+      properties.put("NAVIDAD", localDTO.getNavidad());
+      properties.put("LUNES", localDTO.getLunes());
+      properties.put("MARTES", localDTO.getMartes());
+      properties.put("MIERCOLES", localDTO.getMiercoles());
+      properties.put("JUEVES", localDTO.getJueves());
+      properties.put("VIERNES", localDTO.getViernes());
+      properties.put("SABADO", localDTO.getSabado());
+      properties.put("DOMINGO", localDTO.getDomingo());
+      properties.put("TELLEFONO", localDTO.getTelefono());
+      properties.put("WHATSAPP", localDTO.getWhatsapp());
+      properties.put("INSTAGRAM", localDTO.getInstagram());
+      properties.put("FACEBOOK", localDTO.getFacebook());
+      properties.put("WEB", localDTO.getWeb());
+      properties.put("RUTA_GOOGLE", localDTO.getRutaGoogle());
+
+      jsonObject.put("properties", properties);
+      jsonObject.put("geometry", geometry);
+      jsonObject.put("type", "Feature");
+
+      featuresArray.put(jsonObject);
+
+    }
+
+    geojson.put("features", featuresArray);
+    geojson.put("type", "FeatureCollection");
+
+    return geojson;
   }
 
   public List<DeliveryDTO> getDelivery(String city) {
