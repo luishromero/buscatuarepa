@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-ADD default.conf /etc/nginx/conf.d/default.conf
+ADD nginx/default.conf /etc/nginx/conf.d/default.conf
 ADD app /usr/share/nginx/html/
 
 # docker build -t frontendbta .
