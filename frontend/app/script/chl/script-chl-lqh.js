@@ -237,7 +237,12 @@ $(document).ready(function () {
 });
 
 function getDataLocales() {
-    $.ajax("./php/chl/consulta-locales-chl-lqh.php", {
+    $.ajax({
+        url: "/api/locales",
+        type: "get",
+        data: {
+            city: "chl_llanquihue"
+        },
         success: function (respLocales) {
             mapDataLocales(respLocales);
         },
@@ -247,10 +252,15 @@ function getDataLocales() {
             }, 2000)
         }
     })
-};
+}
 
 function getDataDelivery() {
-    $.ajax("./php/chl/consulta-delivery-chl-lqh.php", {
+    $.ajax({
+        url: "/api/delivery",
+        type: "get",
+        data: {
+            city: "chl_llanquihue"
+        },
         success: function (respDelivery) {
             mapDataDelivery(respDelivery);
         },
@@ -260,4 +270,4 @@ function getDataDelivery() {
             }, 2000)
         }
     })
-};
+}

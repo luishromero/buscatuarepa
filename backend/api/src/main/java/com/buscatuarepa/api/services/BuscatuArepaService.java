@@ -141,7 +141,7 @@ public class BuscatuArepaService {
     return geojson;
   }
 
-  public List<DeliveryDTO> getDelivery(String city) {
+  public JSONArray getDelivery(String city) {
     List<DeliveryDTO> deliveryList = new ArrayList<>();
     if (city.equals(Constant.BUENOSAIRESTABLE)) {
       deliveryList = deliveryRepository.getBuenosAiresDelivery();
@@ -161,7 +161,37 @@ public class BuscatuArepaService {
     if (city.equals(Constant.MONTEVIDEOTABLE)) {
       deliveryList = deliveryRepository.getMontevideoDelivery();
     }
-    return deliveryList;
+
+    JSONArray response = new JSONArray();
+
+    for (DeliveryDTO deliveryDTO : deliveryList) {
+
+      JSONObject jsonObject = new JSONObject();
+
+      jsonObject.put("COD", deliveryDTO.getCod());
+      jsonObject.put("NOMBRE", deliveryDTO.getNombre());
+      jsonObject.put("BARRIO", deliveryDTO.getBarrio());
+      jsonObject.put("DESCRIPCION", deliveryDTO.getDescripcion());
+      jsonObject.put("CATEGORIA", deliveryDTO.getCategoria());
+      jsonObject.put("ETIQUETAS", deliveryDTO.getEtiquetas());
+      jsonObject.put("NAVIDAD", deliveryDTO.getNavidad());
+      jsonObject.put("LUNES", deliveryDTO.getLunes());
+      jsonObject.put("MARTES", deliveryDTO.getMartes());
+      jsonObject.put("MIERCOLES", deliveryDTO.getMiercoles());
+      jsonObject.put("JUEVES", deliveryDTO.getJueves());
+      jsonObject.put("VIERNES", deliveryDTO.getViernes());
+      jsonObject.put("SABADO", deliveryDTO.getSabado());
+      jsonObject.put("DOMINGO", deliveryDTO.getDomingo());
+      jsonObject.put("TELEFONO", deliveryDTO.getTelefono());
+      jsonObject.put("WHATSAPP", deliveryDTO.getWhatsapp());
+      jsonObject.put("INSTAGRAM", deliveryDTO.getInstagram());
+      jsonObject.put("FACEBOOK", deliveryDTO.getFacebook());
+      jsonObject.put("WEB", deliveryDTO.getWeb());
+
+      response.put(jsonObject);
+    }
+
+    return response;
   }
 
   public void saveEdition(EditionDTO editionDTO) {

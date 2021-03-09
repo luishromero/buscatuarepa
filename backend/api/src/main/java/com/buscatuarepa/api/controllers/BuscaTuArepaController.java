@@ -1,13 +1,11 @@
 package com.buscatuarepa.api.controllers;
 
-import java.util.List;
-
-import com.buscatuarepa.api.dtos.DeliveryDTO;
 import com.buscatuarepa.api.dtos.EditionDTO;
 import com.buscatuarepa.api.dtos.NuevasFronterasDTO;
 import com.buscatuarepa.api.dtos.SuggestionDTO;
 import com.buscatuarepa.api.services.BuscatuArepaService;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,9 +32,9 @@ public class BuscaTuArepaController {
   }
 
   @GetMapping(value = "/delivery", produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<List<DeliveryDTO>> getDelivery(@RequestParam(value = "city", required = true) String city) {
-    List<DeliveryDTO> resp = buscaTuArepaService.getDelivery(city);
-    return new ResponseEntity<>(resp, HttpStatus.OK);
+  public ResponseEntity<Object> getDelivery(@RequestParam(value = "city", required = true) String city) {
+    JSONArray resp = buscaTuArepaService.getDelivery(city);
+    return new ResponseEntity<>(resp.toList(), HttpStatus.OK);
   }
 
   @PostMapping(value = "/edition")
