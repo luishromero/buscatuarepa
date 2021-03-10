@@ -99,7 +99,7 @@ COD varchar(9)
 );
 
 CREATE TABLE buscatuarepa_arg (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) NOT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PAIS varchar(30) DEFAULT NULL,
@@ -262,7 +262,7 @@ INSERT INTO buscatuarepa_arg (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, CALLE, ALTU
 (129, 'ARG00128', 'Dulces & Tintos (Villa Urquiza)', 'Argentina', 'Buenos Aires', 'Villa Urquiza', 'La Pampa ', '4856', NULL, 'Productos Venezolanos', 'local', NULL, NULL, NULL, NULL, '10:00 - 20:00', '10:00 - 20:00', '10:00 - 20:00', '10:00 - 20:00', '10:00 - 20:00', '10:00 - 20:00', '10:00 - 20:00', NULL, '5491123860980', 'https://www.instagram.com/dulcesytintos/', NULL, NULL, NULL, 'https://www.google.com/maps/dir//Dulces+y+tintos,+La+Pampa+4856,+C1431+CQH,+Buenos+Aires/@-34.5781703,-58.4782815,17.5z/data=!4m16!1m6!3m5!1s0x95bcb723e1ae5331:0xc541672502047173!2sDulces+y+tintos!8m2!3d-34.5783976!4d-58.477531!4m8!1m0!1m5!1m1!1s0x95', '-58.477522', '-34.578390');
 
 CREATE TABLE buscatuarepa_chl (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) NOT NULL,
  NOMBRE varchar(50) NOT NULL,
  PAIS varchar(30) DEFAULT 'Chile',
@@ -389,7 +389,7 @@ INSERT INTO buscatuarepa_chl (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, CALLE, ALTU
 (94, 'CHL00093', 'La Korito', 'Chile', 'Llanquihue', 'Los Lagos', 'Ecuador', '1350', NULL, 'Comida venezolana', 'restaurante', 'Hamburguesa, Perro Caliente', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '56964947529', 'https://www.instagram.com/comidalakorito/?hl=en', NULL, NULL, NULL, 'https://www.google.com/maps/place/comida+la+korito/@-41.4771253,-72.9559427,21z/data=!4m5!3m4!1s0x96183bae2d61c0e3:0xbdac20b0d18691!8m2!3d-41.4770594!4d-72.9558223', '-72.955820', '-41.477060');
 
 CREATE TABLE buscatuarepa_mex (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) NOT NULL,
  NOMBRE varchar(50) NOT NULL,
  PAIS varchar(30) DEFAULT NULL,
@@ -461,7 +461,7 @@ INSERT INTO buscatuarepa_mex (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, CALLE, ALTU
 (36, 'MEX00036', 'Chicken Gourmet', 'México', 'Ciudad de Mexico', 'Roma Norte', 'Chihuahua', '115', NULL, 'Pollo Frito', 'restaurante', 'Pollo Frito', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://www.instagram.com/chickengourmet.cdmx/?hl=en', NULL, NULL, NULL, 'https://www.google.com/maps/dir//Chihuahua+115,+Roma+Nte.,+Cuauht%C3%A9moc,+06700+Ciudad+de+M%C3%A9xico,+CDMX,+Mexico/@19.4197281,-99.1623485,16.25z/data=!4m17!1m7!3m6!1s0x85d1ff3a54f3eb5f:0x142d9918c12fc53b!2sChihuahua+115,+Roma+Nte.,+Cuauht%C3%A9mo', '-99.159666', '19.417518');
 
 CREATE TABLE buscatuarepa_ury (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) NOT NULL,
  NOMBRE varchar(50) NOT NULL,
  PAIS varchar(30) DEFAULT NULL,
@@ -620,7 +620,7 @@ COD varchar(9)
 );
 
 CREATE TABLE deliverys_arg (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(9) NOT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PAIS varchar(30) DEFAULT NULL,
@@ -747,7 +747,7 @@ INSERT INTO deliverys_arg (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, DESCRIPCION, C
 (102, 'ARG00099D', 'Patiché', 'Argentina', 'Buenos Aires', 'Palermo', 'Pasticho / Lasaña ', 'criolla', 'Pasticho', NULL, 'propio', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1123900811', '541123900811', 'https://www.instagram.com/unpatiche/?hl=en', NULL, NULL, NULL);
 
 CREATE TABLE deliverys_chl (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(9) NOT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PAIS varchar(30) DEFAULT NULL,
@@ -804,7 +804,7 @@ INSERT INTO deliverys_chl (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, DESCRIPCION, C
 (27, 'CHL00027D', 'Golfeado Mania', 'Chile', 'Santiago', 'San Miguel', 'Golfeados', 'criolla', 'Golfeado', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '56978325232 / 56978308563', NULL, 'https://www.instagram.com/golfeadomania2014/', NULL, NULL, NULL);
 
 CREATE TABLE deliverys_mex (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(9) NOT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PAIS varchar(30) DEFAULT NULL,
@@ -837,7 +837,7 @@ INSERT INTO deliverys_mex (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, DESCRIPCION, C
 (2, 'MEX00002D', 'Dulce Avila', 'México', 'Ciudad de Mexico', 'Doctor Erazo 94 ', 'Postres y Pasapalos', 'postre', 'Torta, Tequeño, Pasapalo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '5584026275 ', NULL, 'https://www.instagram.com/dulcegolfeadoavila/', NULL, NULL, 'dulceavilamx@gmail.com');
 
 CREATE TABLE deliverys_ury (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(9) NOT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PAIS varchar(30) DEFAULT NULL,
@@ -893,7 +893,7 @@ INSERT INTO deliverys_ury (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, DESCRIPCION, C
 (26, 'URY00026D', 'Lacteos Roraima', 'Uruguay', 'Montevideo', NULL, 'Productores de queso', 'productores', 'Queso', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '59897313097', '59897129018', 'https://www.instagram.com/lacteosroraima/', NULL, NULL, 'lacteosroraima@gmail.com');
 
 CREATE TABLE edi_arg (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  TIPO_EDI varchar(20) NOT NULL,
@@ -909,7 +909,7 @@ INSERT INTO edi_arg (ID, COD, NOMBRE, TIPO_EDI, EDI_SUG, OBSERVACION) VALUES
 (15, 'ARG00067D', 'Between Food Plates', 'Horario', 'Horarios de 10 a 20 hs. ', 'ACTUALIZADO');
 
 CREATE TABLE edi_chl (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  TIPO_EDI varchar(20) NOT NULL,
@@ -924,7 +924,7 @@ INSERT INTO edi_chl (ID, COD, NOMBRE, TIPO_EDI, EDI_SUG, OBSERVACION) VALUES
 (15, 'CHL00076', 'Minimarket Victoria Spa', 'Otro', 'La imagen no se ve LR', 'REVISAR');
 
 CREATE TABLE edi_mex (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  TIPO_EDI varchar(20) NOT NULL,
@@ -936,7 +936,7 @@ INSERT INTO edi_mex (ID, COD, NOMBRE, TIPO_EDI, EDI_SUG, OBSERVACION) VALUES
 (1, 'MEX00011', 'La Trattoria de la arepa', 'Horario', 'Agregar ,Domingos de 1 pm a 9 pm\r\nEncargado : Glenda ', 'ACTUALIZADO');
 
 CREATE TABLE edi_ury (
- ID integer NOT NULL,
+ ID SERIAL,
  COD varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  TIPO_EDI varchar(20) NOT NULL,
@@ -995,7 +995,7 @@ COD varchar(9)
 );
 
 CREATE TABLE nuevasfronteras (
- ID integer NOT NULL,
+ ID SERIAL,
  PAIS varchar(10) DEFAULT NULL,
  CIUDAD varchar(100) DEFAULT NULL,
  NEGOCIO varchar(10) DEFAULT NULL,
@@ -1021,7 +1021,7 @@ INSERT INTO nuevasfronteras (ID, PAIS, CIUDAD, NEGOCIO, NOMBRE, DIRECCION, TIPO_
 (15, 'MX', 'Ciudad de México ', 'Instagram', 'Chicken Gourmet', 'Calle Chihuahua 115 Roma Norte ', 'Instagram', 'Fabiola Mendoza ', NULL, 'AGREGADO');
 
 CREATE TABLE sug_arg (
- ID integer NOT NULL,
+ ID SERIAL,
  TIPO_EMPRESA varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,
@@ -1077,7 +1077,7 @@ INSERT INTO sug_arg (ID, TIPO_EMPRESA, NOMBRE, PRODUCTO, DIRECCION, CIUDAD, TIPO
 (82, 'DELIVERY', '@vzla_dulce_tentaciones', 'Producto', NULL, 'Buenos Aires', 'Instagram', '+5491140679849', NULL, NULL);
 
 CREATE TABLE sug_chl (
- ID integer NOT NULL,
+ ID SERIAL,
  TIPO_EMPRESA varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,
@@ -1097,7 +1097,7 @@ INSERT INTO sug_chl (ID, TIPO_EMPRESA, NOMBRE, PRODUCTO, DIRECCION, CIUDAD, TIPO
 (17, 'LOCAL', 'Chur Chil', NULL, 'Av. Los carrera 945', 'Concepción', 'Instagram', 'www.instagram.com/churchil.cl', NULL, NULL);
 
 CREATE TABLE sug_mex (
- ID integer NOT NULL,
+ ID SERIAL,
  TIPO_EMPRESA varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,
@@ -1118,7 +1118,7 @@ INSERT INTO sug_mex (ID, TIPO_EMPRESA, NOMBRE, PRODUCTO, DIRECCION, CIUDAD, TIPO
 (7, 'DELIVERY', 'Órale mi Pana ', 'Comida venezolana', NULL, 'Ciudad de Mexico calle Zamora Colonia condesa', 'Instagram', '@oralemipana ', NULL, NULL);
 
 CREATE TABLE sug_ury (
- ID integer NOT NULL,
+ ID SERIAL,
  TIPO_EMPRESA varchar(10) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,

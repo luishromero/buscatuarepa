@@ -436,9 +436,7 @@ public class BuscatuArepaService {
     if (!nuevasFronterasDTO.getContacto().isEmpty()) {
       nuevasFronteras.setContacto(nuevasFronterasDTO.getContacto());
     }
-    if (!nuevasFronterasDTO.getCorreoUser().isEmpty()) {
-      nuevasFronteras.setCorreoUser(nuevasFronterasDTO.getCorreoUser());
-    }
+
     nuevasFronterasRepository.saveAndFlush(nuevasFronteras);
 
   }

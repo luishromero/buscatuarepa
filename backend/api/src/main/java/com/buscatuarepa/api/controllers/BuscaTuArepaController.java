@@ -48,7 +48,7 @@ public class BuscaTuArepaController {
   }
 
   @PostMapping(value = "/new-frontier")
-  public void saveNewFrontier(@RequestBody NuevasFronterasDTO nuevasFronterasDTO) {
+  public void saveNewFrontier(NuevasFronterasDTO nuevasFronterasDTO) {
     buscaTuArepaService.saveNewFrontier(nuevasFronterasDTO);
   }
 
