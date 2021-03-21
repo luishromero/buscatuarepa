@@ -88,62 +88,62 @@ function onEachFeature(feature, layer) {
     $("#form-sug-nombre").text(feature.properties.NOMBRE);
 
     //popula horario por dia
-    if (layer.feature.properties.LUNES === null) {
+    if (!layer.feature.properties.LUNES) {
       $("#td-horario-local-lunes").html('Sin Datos');
     } else {
       $("#td-horario-local-lunes").html(feature.properties.LUNES);
     }
-    if (layer.feature.properties.MARTES === null) {
+    if (!layer.feature.properties.MARTES) {
       $("#td-horario-local-martes").html('Sin Datos');
     } else {
       $("#td-horario-local-martes").html(feature.properties.MARTES);
     }
-    if (layer.feature.properties.MIERCOLES === null) {
+    if (!layer.feature.properties.MIERCOLES) {
       $("#td-horario-local-miercoles").html('Sin Datos');
     } else {
       $("#td-horario-local-miercoles").html(feature.properties.MIERCOLES);
     }
-    if (layer.feature.properties.JUEVES === null) {
+    if (!layer.feature.properties.JUEVES) {
       $("#td-horario-local-jueves").html('Sin Datos');
     } else {
       $("#td-horario-local-jueves").html(feature.properties.JUEVES);
     }
-    if (layer.feature.properties.VIERNES === null) {
+    if (!layer.feature.properties.VIERNES) {
       $("#td-horario-local-viernes").html('Sin Datos');
     } else {
       $("#td-horario-local-viernes").html(feature.properties.VIERNES);
     }
-    if (layer.feature.properties.SABADO === null) {
+    if (!layer.feature.properties.SABADO) {
       $("#td-horario-local-sabado").html('Sin Datos');
     } else {
       $("#td-horario-local-sabado").html(feature.properties.SABADO);
     }
-    if (layer.feature.properties.DOMINGO === null) {
+    if (!layer.feature.properties.DOMINGO) {
       $("#td-horario-local-domingo").html('Sin Datos');
     } else {
       $("#td-horario-local-domingo").html(feature.properties.DOMINGO);
     }
 
     //polula telefono
-    if (layer.feature.properties.TELEFONO === null) {
+    if (!layer.feature.properties.TELEFONO) {
       $("#numero-local-telefono").text('Sin Datos');
     } else {
       $("#numero-local-telefono").text(feature.properties.TELEFONO);
     }
 
     //remueve clase hidden si existe link de red social
-    if (layer.feature.properties.FACEBOOK !== null || layer.feature.properties.FACEBOOK === "" ) {
+    if (layer.feature.properties.FACEBOOK) {
       $("#info-local-facebook").parents('li').removeClass("displayNone");
-    };
-    if (layer.feature.properties.INSTAGRAM !== null || layer.feature.properties.INSTAGRAM === "") {
+    }
+    if (layer.feature.properties.INSTAGRAM) {
       $("#info-local-instagram").parents('li').removeClass("displayNone");
-    };
-    if (layer.feature.properties.WHATSAPP !== null || layer.feature.properties.WHATSAPP === "") {
+    }
+    if (layer.feature.properties.WHATSAPP) {
       $("#info-local-whatsapp").parents('li').removeClass("displayNone");
-    };
-    if (layer.feature.properties.WEB !== null || layer.feature.properties.WEB === "") {
+    }
+    if (layer.feature.properties.WEB) {
       $("#info-local-web").parents('li').removeClass("displayNone");
-    };
+    }
 
     //insertando codigo en formulario de sugerencia de edicion
     $("#cod-Sug-Edi").attr('value', layer.feature.properties.COD);
@@ -227,37 +227,37 @@ function mapInfoDelivery(e) {
       $("#info-delivery-whatsapp").attr('href', 'https://wa.me/' + whatsappDeliveryLink);
 
       //popula horario por dia
-      if (deliveryData[i].LUNES === null) {
+      if (!deliveryData[i].LUNES) {
         $("#td-horario-delivery-lunes").html('Sin Datos');
       } else {
         $("#td-horario-delivery-lunes").html(deliveryData[i].LUNES);
       }
-      if (deliveryData[i].MARTES === null) {
+      if (!deliveryData[i].MARTES) {
         $("#td-horario-delivery-martes").html('Sin Datos');
       } else {
         $("#td-horario-delivery-martes").html(deliveryData[i].MARTES);
       }
-      if (deliveryData[i].MIERCOLES === null) {
+      if (!deliveryData[i].MIERCOLES) {
         $("#td-horario-delivery-miercoles").html('Sin Datos');
       } else {
         $("#td-horario-delivery-miercoles").html(deliveryData[i].MIERCOLES);
       }
-      if (deliveryData[i].JUEVES === null) {
+      if (!deliveryData[i].JUEVES) {
         $("#td-horario-delivery-jueves").html('Sin Datos');
       } else {
         $("#td-horario-delivery-jueves").html(deliveryData[i].JUEVES);
       }
-      if (deliveryData[i].VIERNES === null) {
+      if (!deliveryData[i].VIERNES) {
         $("#td-horario-delivery-viernes").html('Sin Datos');
       } else {
         $("#td-horario-delivery-viernes").html(deliveryData[i].VIERNES);
       }
-      if (deliveryData[i].SABADO === null) {
+      if (!deliveryData[i].SABADO) {
         $("#td-horario-delivery-sabado").html('Sin Datos');
       } else {
         $("#td-horario-delivery-sabado").html(deliveryData[i].SABADO);
       }
-      if (deliveryData[i].DOMINGO === null) {
+      if (!deliveryData[i].DOMINGO) {
         $("#td-horario-delivery-domingo").html('Sin Datos');
       } else {
         $("#td-horario-delivery-domingo").html(deliveryData[i].DOMINGO);
@@ -268,25 +268,25 @@ function mapInfoDelivery(e) {
       $("#form-sug-nombre").text(deliveryData[i].NOMBRE);
 
       //polula telefono
-      if (deliveryData[i].TELEFONO === null) {
+      if (!deliveryData[i].TELEFONO) {
         $("#numero-delivery-telefono").text('Sin Datos');
       } else {
         $("#numero-delivery-telefono").text(deliveryData[i].TELEFONO);
       }
 
-      //remueve clase si existe link de red social
-      if (deliveryData[i].FACEBOOK !== null || deliveryData[i].facebook === "") {
+      //remueve clase si no existe link de red social
+      if (!deliveryData[i].FACEBOOK) {
         $("#info-delivery-facebook").parents('li').removeClass("displayNone");
-      };
-      if (deliveryData[i].INSTAGRAM !== null || deliveryData[i].instagram === "") {
+      }
+      if (!deliveryData[i].INSTAGRAM) {
         $("#info-delivery-instagram").parents('li').removeClass("displayNone");
-      };
-      if (deliveryData[i].WHATSAPP !== null || deliveryData[i].whatsapp === "") {
+      }
+      if (!deliveryData[i].WHATSAPP) {
         $("#info-delivery-whatsapp").parents('li').removeClass("displayNone");
-      };
-      if (deliveryData[i].WEB !== null || deliveryData[i].web === "") {
+      }
+      if (!deliveryData[i].WEB) {
         $("#info-delivery-web").parents('li').removeClass("displayNone");
-      };
+      }
 
       //insertando codigo en formulario de sugerencia de edicion
       $("#cod-Sug-Edi").attr('value', dataDeliveryId);

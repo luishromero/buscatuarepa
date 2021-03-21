@@ -1,103 +1,3 @@
-CREATE TABLE arg_buenosaires (
-COD varchar(10)
-,NOMBRE varchar(50)
-,BARRIO varchar(30)
-,CALLE varchar(30)
-,ALTURA varchar(10)
-,LOCAL varchar(10)
-,DESCRIPCION varchar(250)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-,RUTA_GOOGLE varchar(250)
-,X varchar(11)
-,Y varchar(11)
-);
-
-CREATE TABLE arg_buenosaires_del (
-COD varchar(9)
-,NOMBRE varchar(50)
-,BARRIO varchar(20)
-,DESCRIPCION varchar(100)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-);
-
-CREATE TABLE arg_neuquen (
-COD varchar(10)
-,NOMBRE varchar(50)
-,BARRIO varchar(30)
-,CALLE varchar(30)
-,ALTURA varchar(10)
-,LOCAL varchar(10)
-,DESCRIPCION varchar(250)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-,RUTA_GOOGLE varchar(250)
-,X varchar(11)
-,Y varchar(11)
-);
-
-CREATE TABLE arg_neuquen_del (
-COD varchar(9)
-,NOMBRE varchar(50)
-,BARRIO varchar(20)
-,DESCRIPCION varchar(100)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-);
-
 CREATE TABLE buscatuarepa_arg (
  ID SERIAL,
  COD varchar(10) NOT NULL,
@@ -519,106 +419,6 @@ INSERT INTO buscatuarepa_ury (ID, COD, NOMBRE, PAIS, CIUDAD, BARRIO, CALLE, ALTU
 (30, 'URY00030', 'Aderezos AB', 'Uruguay', 'Montevideo', 'Cordón', 'Tristán Narvaja', '1545', NULL, 'Aderezos y Salsas venezolanas', 'local', 'Guasacaca, Salsa Picante', NULL, 'delivery propio', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '09:00 - 16:00', '598097965680', NULL, 'https://www.instagram.com/aderezos_ab/', NULL, NULL, NULL, 'https://www.google.com/maps/place/Feria+de+Tristan+Narvaja/@-34.9033398,-56.1797973,16z/data=!4m5!3m4!1s0x959f804b2d33107b:0x96c7b9f5e31dc82!8m2!3d-34.9022785!4d-56.1773509', '-56.179351', '-34.899043'),
 (31, 'URY00031', 'Deli Express', 'Uruguay', 'Montevideo', 'Villa Muñoz ', 'Justicia', '2294', NULL, 'Arepas', 'local', 'Arepa, Pastelito', NULL, 'delivery propio', NULL, '07:30 - 19:30', '07:30 - 19:30', '07:30 - 19:30', '07:30 - 19:30', '07:30 - 19:30', '07:30 - 14:00', NULL, '59894671590', NULL, 'https://www.instagram.com/deliexpressmvd/', NULL, NULL, 'deliexpressmvd@gmail.com', 'https://www.google.com/maps/dir//Justicia+2294,+11800+Montevideo,+Departamento+de+Montevideo,+Uruguay/@-34.8876337,-56.1800244,15.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x959f804732eff85f:0x317e97d88ee4f6c7!2m2!1d-56.1792389!2d-34.8874044', '-56.179174', '-34.887445');
 
-CREATE TABLE chl_llanquihue (
-COD varchar(10)
-,NOMBRE varchar(50)
-,BARRIO varchar(30)
-,CALLE varchar(30)
-,ALTURA varchar(10)
-,LOCAL varchar(10)
-,DESCRIPCION varchar(250)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-,RUTA_GOOGLE varchar(250)
-,X varchar(11)
-,Y varchar(11)
-);
-
-CREATE TABLE chl_llanquihue_del (
-COD varchar(9)
-,NOMBRE varchar(50)
-,BARRIO varchar(20)
-,DESCRIPCION varchar(100)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-);
-
-CREATE TABLE chl_santiago (
-COD varchar(10)
-,NOMBRE varchar(50)
-,BARRIO varchar(30)
-,CALLE varchar(30)
-,ALTURA varchar(10)
-,LOCAL varchar(10)
-,DESCRIPCION varchar(250)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-,RUTA_GOOGLE varchar(250)
-,X varchar(11)
-,Y varchar(11)
-);
-
-CREATE TABLE chl_santiago_del (
-COD varchar(9)
-,NOMBRE varchar(50)
-,BARRIO varchar(20)
-,DESCRIPCION varchar(100)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-);
-
 CREATE TABLE deliverys_arg (
  ID SERIAL,
  COD varchar(9) NOT NULL,
@@ -944,56 +744,6 @@ CREATE TABLE edi_ury (
  OBSERVACION varchar(100) DEFAULT NULL
 );
 
-CREATE TABLE mex_ciudad (
-COD varchar(10)
-,NOMBRE varchar(50)
-,BARRIO varchar(30)
-,CALLE varchar(30)
-,ALTURA varchar(10)
-,LOCAL varchar(10)
-,DESCRIPCION varchar(250)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-,RUTA_GOOGLE varchar(250)
-,X varchar(11)
-,Y varchar(11)
-);
-
-CREATE TABLE mex_ciudad_del (
-COD varchar(9)
-,NOMBRE varchar(50)
-,BARRIO varchar(20)
-,DESCRIPCION varchar(100)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-);
-
 CREATE TABLE nuevasfronteras (
  ID SERIAL,
  PAIS varchar(10) DEFAULT NULL,
@@ -1022,7 +772,7 @@ INSERT INTO nuevasfronteras (ID, PAIS, CIUDAD, NEGOCIO, NOMBRE, DIRECCION, TIPO_
 
 CREATE TABLE sug_arg (
  ID SERIAL,
- TIPO_EMPRESA varchar(10) DEFAULT NULL,
+ TIPO_EMPRESA varchar(20) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,
  DIRECCION varchar(100) DEFAULT NULL,
@@ -1078,7 +828,7 @@ INSERT INTO sug_arg (ID, TIPO_EMPRESA, NOMBRE, PRODUCTO, DIRECCION, CIUDAD, TIPO
 
 CREATE TABLE sug_chl (
  ID SERIAL,
- TIPO_EMPRESA varchar(10) DEFAULT NULL,
+ TIPO_EMPRESA varchar(20) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,
  DIRECCION varchar(100) DEFAULT NULL,
@@ -1098,7 +848,7 @@ INSERT INTO sug_chl (ID, TIPO_EMPRESA, NOMBRE, PRODUCTO, DIRECCION, CIUDAD, TIPO
 
 CREATE TABLE sug_mex (
  ID SERIAL,
- TIPO_EMPRESA varchar(10) DEFAULT NULL,
+ TIPO_EMPRESA varchar(20) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,
  DIRECCION varchar(100) DEFAULT NULL,
@@ -1119,7 +869,7 @@ INSERT INTO sug_mex (ID, TIPO_EMPRESA, NOMBRE, PRODUCTO, DIRECCION, CIUDAD, TIPO
 
 CREATE TABLE sug_ury (
  ID SERIAL,
- TIPO_EMPRESA varchar(10) DEFAULT NULL,
+ TIPO_EMPRESA varchar(20) DEFAULT NULL,
  NOMBRE varchar(50) DEFAULT NULL,
  PRODUCTO varchar(50) DEFAULT NULL,
  DIRECCION varchar(100) DEFAULT NULL,
@@ -1139,56 +889,6 @@ INSERT INTO sug_ury (ID, TIPO_EMPRESA, NOMBRE, PRODUCTO, DIRECCION, CIUDAD, TIPO
 (22, 'LOCAL', 'Pardago ', NULL, 'Av Noche de Paz 14, delegación Cuajimalpa plaza vista hermosa ', 'Ciudad de México ', 'Instagram', 'Enrique Partidas Daboin ', NULL, 'AGREGADOS'),
 (25, 'DELIVERY', 'Your Trip Vip', 'Boletos aéreos, renta de autos, cruceros, hoteles ', NULL, 'montevideo', 'Instagram', '@yourtripvip', NULL, NULL),
 (26, 'LOCAL', 'Guaratepuy', NULL, 'Gobernador Viana 2686', 'Montevideo', 'Instagram', '097555940', NULL, 'AGREGADO');
-
-CREATE TABLE ury_montevideo (
-COD varchar(10)
-,NOMBRE varchar(50)
-,BARRIO varchar(30)
-,CALLE varchar(30)
-,ALTURA varchar(10)
-,LOCAL varchar(10)
-,DESCRIPCION varchar(250)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-,RUTA_GOOGLE varchar(250)
-,X varchar(11)
-,Y varchar(11)
-);
-
-CREATE TABLE ury_montevideo_del (
-COD varchar(9)
-,NOMBRE varchar(50)
-,BARRIO varchar(20)
-,DESCRIPCION varchar(100)
-,CATEGORIA varchar(50)
-,ETIQUETAS varchar(100)
-,NAVIDAD varchar(100)
-,LUNES varchar(30)
-,MARTES varchar(30)
-,MIERCOLES varchar(30)
-,JUEVES varchar(30)
-,VIERNES varchar(30)
-,SABADO varchar(30)
-,DOMINGO varchar(30)
-,TELEFONO varchar(30)
-,WHATSAPP varchar(30)
-,INSTAGRAM varchar(250)
-,FACEBOOK varchar(250)
-,WEB varchar(100)
-);
 
 DROP TABLE IF EXISTS arg_buenosaires;
 

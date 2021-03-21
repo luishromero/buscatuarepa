@@ -199,15 +199,12 @@ public class BuscatuArepaService {
     if (editionDTO.getPais().equals(Constant.ARGENTINA)) {
       saveEditionArgentina(editionDTO);
     }
-
     if (editionDTO.getPais().equals(Constant.CHILE)) {
       saveEditionChile(editionDTO);
     }
-
     if (editionDTO.getPais().equals(Constant.MEXICO)) {
       saveEditionMexico(editionDTO);
     }
-
     if (editionDTO.getPais().equals(Constant.URUGUAY)) {
       saveEditionUruguay(editionDTO);
     }
@@ -216,16 +213,16 @@ public class BuscatuArepaService {
 
   private void saveEditionArgentina(EditionDTO editionDTO) {
     EdicionArgentina editionArgentina = new EdicionArgentina();
-    if (!editionDTO.getCod().isEmpty()) {
+    if (editionDTO.getCod() != null) {
       editionArgentina.setCod(editionDTO.getCod());
     }
-    if (!editionDTO.getNombre().isEmpty()) {
+    if (editionDTO.getNombre() != null) {
       editionArgentina.setNombre(editionDTO.getNombre());
     }
-    if (!editionDTO.getTipoEdicion().isEmpty()) {
+    if (editionDTO.getTipoEdicion() != null) {
       editionArgentina.setTipoEdicion(editionDTO.getTipoEdicion());
     }
-    if (!editionDTO.getSugerencia().isEmpty()) {
+    if (editionDTO.getSugerencia() != null) {
       editionArgentina.setSugerencia(editionDTO.getSugerencia());
     }
     edicionArgentinaRepository.saveAndFlush(editionArgentina);
@@ -233,16 +230,16 @@ public class BuscatuArepaService {
 
   private void saveEditionChile(EditionDTO editionDTO) {
     EdicionChile editionChile = new EdicionChile();
-    if (!editionDTO.getCod().isEmpty()) {
+    if (editionDTO.getCod() != null) {
       editionChile.setCod(editionDTO.getCod());
     }
-    if (!editionDTO.getNombre().isEmpty()) {
+    if (editionDTO.getNombre() != null) {
       editionChile.setNombre(editionDTO.getNombre());
     }
-    if (!editionDTO.getTipoEdicion().isEmpty()) {
+    if (editionDTO.getTipoEdicion() != null) {
       editionChile.setTipoEdicion(editionDTO.getTipoEdicion());
     }
-    if (!editionDTO.getSugerencia().isEmpty()) {
+    if (editionDTO.getSugerencia() != null) {
       editionChile.setSugerencia(editionDTO.getSugerencia());
     }
     edicionChileRepository.saveAndFlush(editionChile);
@@ -250,16 +247,16 @@ public class BuscatuArepaService {
 
   private void saveEditionMexico(EditionDTO editionDTO) {
     EdicionMexico editionMexico = new EdicionMexico();
-    if (!editionDTO.getCod().isEmpty()) {
+    if (editionDTO.getCod() != null) {
       editionMexico.setCod(editionDTO.getCod());
     }
-    if (!editionDTO.getNombre().isEmpty()) {
+    if (editionDTO.getNombre() != null) {
       editionMexico.setNombre(editionDTO.getNombre());
     }
-    if (!editionDTO.getTipoEdicion().isEmpty()) {
+    if (editionDTO.getTipoEdicion() != null) {
       editionMexico.setTipoEdicion(editionDTO.getTipoEdicion());
     }
-    if (!editionDTO.getSugerencia().isEmpty()) {
+    if (editionDTO.getSugerencia() != null) {
       editionMexico.setSugerencia(editionDTO.getSugerencia());
     }
     edicionMexicoRepository.saveAndFlush(editionMexico);
@@ -267,16 +264,16 @@ public class BuscatuArepaService {
 
   private void saveEditionUruguay(EditionDTO editionDTO) {
     EdicionUruguay editionUruguay = new EdicionUruguay();
-    if (!editionDTO.getCod().isEmpty()) {
+    if (editionDTO.getCod() != null) {
       editionUruguay.setCod(editionDTO.getCod());
     }
-    if (!editionDTO.getNombre().isEmpty()) {
+    if (editionDTO.getNombre() != null) {
       editionUruguay.setNombre(editionDTO.getNombre());
     }
-    if (!editionDTO.getTipoEdicion().isEmpty()) {
+    if (editionDTO.getTipoEdicion() != null) {
       editionUruguay.setTipoEdicion(editionDTO.getTipoEdicion());
     }
-    if (!editionDTO.getSugerencia().isEmpty()) {
+    if (editionDTO.getSugerencia() != null) {
       editionUruguay.setSugerencia(editionDTO.getSugerencia());
     }
     edicionUruguayRepository.saveAndFlush(editionUruguay);
@@ -299,28 +296,28 @@ public class BuscatuArepaService {
 
   private void saveSuggestionArgentina(SuggestionDTO suggestionDTO) {
     SugerenciaArgentina sugerenciaArgentina = new SugerenciaArgentina();
-    if (!suggestionDTO.getTipoEmpresa().isEmpty()) {
+    if (suggestionDTO.getTipoEmpresa() != null) {
       sugerenciaArgentina.setTipoEmpresa(suggestionDTO.getTipoEmpresa());
     }
-    if (!suggestionDTO.getNombre().isEmpty()) {
+    if (suggestionDTO.getNombre() != null) {
       sugerenciaArgentina.setNombre(suggestionDTO.getNombre());
     }
-    if (!suggestionDTO.getProducto().isEmpty()) {
+    if (suggestionDTO.getProducto() != null) {
       sugerenciaArgentina.setProducto(suggestionDTO.getProducto());
     }
-    if (!suggestionDTO.getDireccion().isEmpty()) {
+    if (suggestionDTO.getDireccion() != null) {
       sugerenciaArgentina.setDireccion(suggestionDTO.getDireccion());
     }
-    if (!suggestionDTO.getCiudad().isEmpty()) {
+    if (suggestionDTO.getCiudad() != null) {
       sugerenciaArgentina.setCiudad(suggestionDTO.getCiudad());
     }
-    if (!suggestionDTO.getTipoContacto().isEmpty()) {
+    if (suggestionDTO.getTipoContacto() != null) {
       sugerenciaArgentina.setTipoContacto(suggestionDTO.getTipoContacto());
     }
-    if (!suggestionDTO.getContacto().isEmpty()) {
+    if (suggestionDTO.getContacto() != null) {
       sugerenciaArgentina.setContacto(suggestionDTO.getContacto());
     }
-    if (!suggestionDTO.getCorreoContact().isEmpty()) {
+    if (suggestionDTO.getCorreoContact() != null) {
       sugerenciaArgentina.setCorreoContact(suggestionDTO.getCorreoContact());
     }
     sugerenciaArgentinaRepository.saveAndFlush(sugerenciaArgentina);
@@ -328,28 +325,28 @@ public class BuscatuArepaService {
 
   private void saveSuggestionChile(SuggestionDTO suggestionDTO) {
     SugerenciaChile sugerenciaChile = new SugerenciaChile();
-    if (!suggestionDTO.getTipoEmpresa().isEmpty()) {
+    if (suggestionDTO.getTipoEmpresa() != null) {
       sugerenciaChile.setTipoEmpresa(suggestionDTO.getTipoEmpresa());
     }
-    if (!suggestionDTO.getNombre().isEmpty()) {
+    if (suggestionDTO.getNombre() != null) {
       sugerenciaChile.setNombre(suggestionDTO.getNombre());
     }
-    if (!suggestionDTO.getProducto().isEmpty()) {
+    if (suggestionDTO.getProducto() != null) {
       sugerenciaChile.setProducto(suggestionDTO.getProducto());
     }
-    if (!suggestionDTO.getDireccion().isEmpty()) {
+    if (suggestionDTO.getDireccion() != null) {
       sugerenciaChile.setDireccion(suggestionDTO.getDireccion());
     }
-    if (!suggestionDTO.getCiudad().isEmpty()) {
+    if (suggestionDTO.getCiudad() != null) {
       sugerenciaChile.setCiudad(suggestionDTO.getCiudad());
     }
-    if (!suggestionDTO.getTipoContacto().isEmpty()) {
+    if (suggestionDTO.getTipoContacto() != null) {
       sugerenciaChile.setTipoContacto(suggestionDTO.getTipoContacto());
     }
-    if (!suggestionDTO.getContacto().isEmpty()) {
+    if (suggestionDTO.getContacto() != null) {
       sugerenciaChile.setContacto(suggestionDTO.getContacto());
     }
-    if (!suggestionDTO.getCorreoContact().isEmpty()) {
+    if (suggestionDTO.getCorreoContact() != null) {
       sugerenciaChile.setCorreoContact(suggestionDTO.getCorreoContact());
     }
     sugerenciaChileRepository.saveAndFlush(sugerenciaChile);
@@ -357,28 +354,28 @@ public class BuscatuArepaService {
 
   private void saveSuggestionMexico(SuggestionDTO suggestionDTO) {
     SugerenciaMexico sugerenciaMexico = new SugerenciaMexico();
-    if (!suggestionDTO.getTipoEmpresa().isEmpty()) {
+    if (suggestionDTO.getTipoEmpresa() != null) {
       sugerenciaMexico.setTipoEmpresa(suggestionDTO.getTipoEmpresa());
     }
-    if (!suggestionDTO.getNombre().isEmpty()) {
+    if (suggestionDTO.getNombre() != null) {
       sugerenciaMexico.setNombre(suggestionDTO.getNombre());
     }
-    if (!suggestionDTO.getProducto().isEmpty()) {
+    if (suggestionDTO.getProducto() != null) {
       sugerenciaMexico.setProducto(suggestionDTO.getProducto());
     }
-    if (!suggestionDTO.getDireccion().isEmpty()) {
+    if (suggestionDTO.getDireccion() != null) {
       sugerenciaMexico.setDireccion(suggestionDTO.getDireccion());
     }
-    if (!suggestionDTO.getCiudad().isEmpty()) {
+    if (suggestionDTO.getCiudad() != null) {
       sugerenciaMexico.setCiudad(suggestionDTO.getCiudad());
     }
-    if (!suggestionDTO.getTipoContacto().isEmpty()) {
+    if (suggestionDTO.getTipoContacto() != null) {
       sugerenciaMexico.setTipoContacto(suggestionDTO.getTipoContacto());
     }
-    if (!suggestionDTO.getContacto().isEmpty()) {
+    if (suggestionDTO.getContacto() != null) {
       sugerenciaMexico.setContacto(suggestionDTO.getContacto());
     }
-    if (!suggestionDTO.getCorreoContact().isEmpty()) {
+    if (suggestionDTO.getCorreoContact() != null) {
       sugerenciaMexico.setCorreoContact(suggestionDTO.getCorreoContact());
     }
     sugerenciaMexicoRepository.saveAndFlush(sugerenciaMexico);
@@ -386,28 +383,28 @@ public class BuscatuArepaService {
 
   private void saveSuggestionUruguay(SuggestionDTO suggestionDTO) {
     SugerenciaUruguay sugerenciaUruguay = new SugerenciaUruguay();
-    if (!suggestionDTO.getTipoEmpresa().isEmpty()) {
+    if (suggestionDTO.getTipoEmpresa() != null) {
       sugerenciaUruguay.setTipoEmpresa(suggestionDTO.getTipoEmpresa());
     }
-    if (!suggestionDTO.getNombre().isEmpty()) {
+    if (suggestionDTO.getNombre() != null) {
       sugerenciaUruguay.setNombre(suggestionDTO.getNombre());
     }
-    if (!suggestionDTO.getProducto().isEmpty()) {
+    if (suggestionDTO.getProducto() != null) {
       sugerenciaUruguay.setProducto(suggestionDTO.getProducto());
     }
-    if (!suggestionDTO.getDireccion().isEmpty()) {
+    if (suggestionDTO.getDireccion() != null) {
       sugerenciaUruguay.setDireccion(suggestionDTO.getDireccion());
     }
-    if (!suggestionDTO.getCiudad().isEmpty()) {
+    if (suggestionDTO.getCiudad() != null) {
       sugerenciaUruguay.setCiudad(suggestionDTO.getCiudad());
     }
-    if (!suggestionDTO.getTipoContacto().isEmpty()) {
+    if (suggestionDTO.getTipoContacto() != null) {
       sugerenciaUruguay.setTipoContacto(suggestionDTO.getTipoContacto());
     }
-    if (!suggestionDTO.getContacto().isEmpty()) {
+    if (suggestionDTO.getContacto() != null) {
       sugerenciaUruguay.setContacto(suggestionDTO.getContacto());
     }
-    if (!suggestionDTO.getCorreoContact().isEmpty()) {
+    if (suggestionDTO.getCorreoContact() != null) {
       sugerenciaUruguay.setCorreoContact(suggestionDTO.getCorreoContact());
     }
     sugerenciaUruguayRepository.saveAndFlush(sugerenciaUruguay);
@@ -415,25 +412,25 @@ public class BuscatuArepaService {
 
   public void saveNewFrontier(NuevasFronterasDTO nuevasFronterasDTO) {
     NuevasFronteras nuevasFronteras = new NuevasFronteras();
-    if (!nuevasFronterasDTO.getPais().isEmpty()) {
+    if (nuevasFronterasDTO.getPais() != null) {
       nuevasFronteras.setPais(nuevasFronterasDTO.getPais());
     }
-    if (!nuevasFronterasDTO.getCiudad().isEmpty()) {
+    if (nuevasFronterasDTO.getCiudad() != null) {
       nuevasFronteras.setCiudad(nuevasFronterasDTO.getCiudad());
     }
-    if (!nuevasFronterasDTO.getNegocio().isEmpty()) {
+    if (nuevasFronterasDTO.getNegocio() != null) {
       nuevasFronteras.setNegocio(nuevasFronterasDTO.getNegocio());
     }
-    if (!nuevasFronterasDTO.getNombre().isEmpty()) {
+    if (nuevasFronterasDTO.getNombre() != null) {
       nuevasFronteras.setNombre(nuevasFronterasDTO.getNombre());
     }
-    if (!nuevasFronterasDTO.getDireccion().isEmpty()) {
+    if (nuevasFronterasDTO.getDireccion() != null) {
       nuevasFronteras.setDireccion(nuevasFronterasDTO.getDireccion());
     }
-    if (!nuevasFronterasDTO.getTipoContacto().isEmpty()) {
+    if (nuevasFronterasDTO.getTipoContacto() != null) {
       nuevasFronteras.setTipoContacto(nuevasFronterasDTO.getTipoContacto());
     }
-    if (!nuevasFronterasDTO.getContacto().isEmpty()) {
+    if (nuevasFronterasDTO.getContacto() != null) {
       nuevasFronteras.setContacto(nuevasFronterasDTO.getContacto());
     }
 
