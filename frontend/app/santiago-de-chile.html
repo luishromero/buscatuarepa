@@ -69,7 +69,7 @@
 			</ul>
 			<!-- bottom aligned tabs -->
 			<ul role="tablist">
-				<li title="Página principal" id="tablist-about-us-btn"><a href="http://localhost:8181/buscatuarepa.html/"><i
+				<li title="Página principal" id="tablist-about-us-btn"><a href="http://localhost:8181/index.html/"><i
 							class=""></i></a></li>
 			</ul>
 		</div>
@@ -328,34 +328,36 @@
 					<div id="form-sug-nuevo-local-div">
 						<form id="form-sug-nuevo-local" class="">
 							<p>A continuación, complete el siguiente formulario:</p>
+							<input type="hidden" name="pais" value="Chile"/>
+							<input type="hidden" name="tipoEmpresa" value="Local físico"/>
 							<div>
 								<label for="form-sug-nuevo-local-empresa">Tipo de negocio</label>
-								<input type="tel" id="form-sug-nuevo-local-empresa" name="tipo_empresa" disabled="true"
+								<input type="tel" id="form-sug-nuevo-local-empresa" name="" disabled="true"
 									value="Local físico" />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-local-pais">País</label>
-								<input type="tel" id="form-sug-nuevo-local-pais" name="pais_local" disabled="true"
+								<input type="tel" id="form-sug-nuevo-local-pais" name="" disabled="true"
 									value="Chile" />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-local-ciudad">Ciudad (*)</label>
-								<input type="text" id="form-sug-nuevo-local-ciudad" name="ciudad_local" maxlength="50"
+								<input type="text" id="form-sug-nuevo-local-ciudad" name="ciudad" maxlength="50"
 									required />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-local-nombre">Nombre del local (*)</label>
-								<input type="text" id="form-sug-nuevo-local-nombre" name="nombre_local" maxlength="50"
+								<input type="text" id="form-sug-nuevo-local-nombre" name="nombre" maxlength="50"
 									required />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-local-direccion">Dirección del local</label>
-								<input type="text" id="form-sug-nuevo-local-direccion" name="direccion_local"
+								<input type="text" id="form-sug-nuevo-local-direccion" name="direccion"
 									maxlength="100" />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-local-tipo-contacto">Tipo de contacto (*)</label>
-								<select id="form-sug-nuevo-local-tipo-contacto" name="contacto_local" required>
+								<select id="form-sug-nuevo-local-tipo-contacto" name="tipoContacto" required>
 									<option value="" disabled selected>Seleccione una opción</option>
 									<option value="Instagram">Instagram</option>
 									<option value="Facebook">Facebook</option>
@@ -367,7 +369,7 @@
 							</div>
 							<div>
 								<label for="form-sug-nuevo-local-valor-contacto">Contacto (*)</label>
-								<input type="text" id="form-sug-nuevo-local-valor-contacto" name="contacto_valor_local"
+								<input type="text" id="form-sug-nuevo-local-valor-contacto" name="contacto"
 									maxlength="100" required />
 							</div>
 							<div>
@@ -393,34 +395,36 @@
 					<div id="form-sug-nuevo-delivery-div">
 						<form id="form-sug-nuevo-delivery" class="">
 							<p>A continuación, complete el siguiente formulario:</p>
+							<input type="hidden" name="pais" value="Chile"/>
+							<input type="hidden" name="tipoEmpresa" value="Emprendimiento"/>
 							<div>
 								<label for="form-sug-nuevo-delivery-empresa">Tipo de negocio</label>
-								<input type="tel" id="form-sug-nuevo-delivery-empresa" name="tipo_empresa"
+								<input type="tel" id="form-sug-nuevo-delivery-empresa" name=""
 									disabled="true" value="Emprendimiento" />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-delivery-pais">País</label>
-								<input type="tel" id="form-sug-nuevo-delivery-pais" name="pais_delivery" disabled="true"
+								<input type="tel" id="form-sug-nuevo-delivery-pais" name="" disabled="true"
 									value="Chile" />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-delivery-ciudad">Ciudad (*)</label>
-								<input type="text" id="form-sug-nuevo-delivery-ciudad" name="ciudad_delivery"
+								<input type="text" id="form-sug-nuevo-delivery-ciudad" name="ciudad"
 									maxlength="50" required />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-delivery-nombre">Nombre del emprendimiento (*)</label>
-								<input type="text" id="form-sug-nuevo-delivery-nombre" name="nombre_delivery"
+								<input type="text" id="form-sug-nuevo-delivery-nombre" name="nombre"
 									maxlength="50" required />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-delivery-producto">Producto o servicio (*)</label>
-								<input type="text" id="form-sug-nuevo-delivery-producto" name="producto_delivery"
+								<input type="text" id="form-sug-nuevo-delivery-producto" name="producto"
 									maxlength="50" required />
 							</div>
 							<div>
 								<label for="form-sug-nuevo-delivery-tipo-contacto">Tipo de contacto (*)</label>
-								<select id="form-sug-nuevo-delivery-tipo-contacto" name="contacto_delivery" required>
+								<select id="form-sug-nuevo-delivery-tipo-contacto" name="tipoContacto" required>
 									<option value="" disabled selected>Seleccione una opción</option>
 									<option value="Instagram">Instagram</option>
 									<option value="Facebook">Facebook</option>
@@ -433,7 +437,7 @@
 							<div>
 								<label for="form-sug-nuevo-delivery-valor-contacto">Contacto (*)</label>
 								<input type="text" id="form-sug-nuevo-delivery-valor-contacto"
-									name="contacto_valor_delivery" maxlength="100" required />
+									name="contacto" maxlength="100" required />
 							</div>
 							<div>
 								(*) campos requeridos
@@ -460,8 +464,9 @@
 					<div id="form-sug-edicion-div">
 						<form id="form-sug-edicion" class="">
 							<div>
+								<input type="hidden" name="pais" value="Chile"/>
 								<label for="tipo-form-sug-edicion">Tipo de edición sugerida (*)</label>
-								<select id="tipo-form-sug-edicion" name="tipo_edicion" required>
+								<select id="tipo-form-sug-edicion" name="tipoEdicion" required>
 									<option value="" disabled selected>Seleccione una opción</option>
 									<option value="Nombre">Nombre</option>
 									<option value="Direccion">Dirección</option>
@@ -474,11 +479,11 @@
 							</div>
 							<div>
 								<label for="obs-form-sug-edicion">Edición sugerida (*)</label>
-								<textarea id="obs-form-sug-edicion" name="sug_edicion" maxlength="100" required rows="5"
+								<textarea id="obs-form-sug-edicion" name="sugerencia" maxlength="100" required rows="5"
 									cols="50"></textarea>
 							</div>
-							<input id="cod-Sug-Edi" type="hidden" name="cod-Sug-Edi" value="">
-							<input id="nombre-Sug-Edi" type="hidden" name="nombre-Sug-Edi" value="">
+							<input id="cod-Sug-Edi" type="hidden" name="cod" value="">
+							<input id="nombre-Sug-Edi" type="hidden" name="nombre" value="">
 							<div>
 								(*) campos requeridos
 							</div>

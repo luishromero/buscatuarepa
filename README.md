@@ -12,10 +12,10 @@ This web application has been dockerized, here you will find the correspondent d
 docker compose up -d
 ```
 
+The web application is available in localhost:8181
+
 For stop the services, run:
 
 ```
 docker compose down
 ```
-
-The web application is available in localhost:8181/buscatuarepa.html

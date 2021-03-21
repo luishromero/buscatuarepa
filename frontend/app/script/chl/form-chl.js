@@ -4,7 +4,7 @@ $(function () {
     e.preventDefault();
     $.ajax({
       type: "post",
-      url: "http://localhost:8181/php/chl/form-sug-nuevo-local-chl.php",
+      url: "api/suggestion",
       data: $("#form-sug-nuevo-local").serialize(),
       success: function () {
         resetSugLocal();
@@ -34,7 +34,7 @@ $(function () {
     e.preventDefault();
     $.ajax({
       type: "post",
-      url: "http://localhost:8181/php/chl/form-sug-nuevo-delivery-chl.php",
+      url: "api/suggestion",
       data: $("#form-sug-nuevo-delivery").serialize(),
       success: function () {
         resetSugDelivery();
@@ -64,7 +64,7 @@ $(function () {
     e.preventDefault();
     $.ajax({
       type: "post",
-      url: "http://localhost:8181/php/chl/form-sug-edicion-chl.php",
+      url: "api/edition",
       data: $("#form-sug-edicion").serialize(),
       success: function () {
         resetSugEdicion();

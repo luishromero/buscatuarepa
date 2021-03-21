@@ -230,14 +230,19 @@ $(document).ready(function () {
             [-34.698843, -58.463866],
             [-34.614341, -58.531409]
         ]);
-    };
+    }
 
     getDataLocales();
     getDataDelivery();
 });
 
 function getDataLocales() {
-    $.ajax("./php/arg/consulta-locales-arg-bas.php", {
+    $.ajax({
+        url: "/api/locales",
+        type: "get",
+        data: {
+            city: "arg_buenosaires"
+        },
         success: function (respLocales) {
             mapDataLocales(respLocales);
         },
@@ -247,10 +252,15 @@ function getDataLocales() {
             }, 2000)
         }
     })
-};
+}
 
 function getDataDelivery() {
-    $.ajax("./php/arg/consulta-delivery-arg-bas.php", {
+    $.ajax({
+        url: "/api/delivery",
+        type: "get",
+        data: {
+            city: "arg_buenosaires"
+        },
         success: function (respDelivery) {
             mapDataDelivery(respDelivery);
         },
@@ -260,4 +270,4 @@ function getDataDelivery() {
             }, 2000)
         }
     })
-};
+}

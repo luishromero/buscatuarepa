@@ -3,14 +3,14 @@ $(function () {
     e.preventDefault();
     $.ajax({
       type: "post",
-      url: "http://localhost:8181/php/form-nuevas-fronteras.php",
+      url: "/api/new-frontier",
       data: $("#form-nuevas-fronteras").serialize(),
       success: function () {},
     });
     $("#form-nuevas-fronteras-div").addClass("displayNone");
     $("#msj-after-form-submit").removeClass("displayNone");
-    setTimeout(function () {
-      window.location.href = "http://localhost:8181/buscatuarepa.html";
-    }, 3000);
+    // setTimeout(function () {
+    //   window.location.href = "http://localhost:8181";
+    // }, 3000);
   });
 });

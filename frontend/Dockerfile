@@ -1,6 +1,7 @@
-FROM php:7.2.18-apache
+FROM nginx:alpine
 
-ADD app /var/www/html
+ADD nginx/default.conf /etc/nginx/conf.d/default.conf
+ADD app /usr/share/nginx/html/
 
-RUN apt-get update -y
-RUN docker-php-ext-install pdo pdo_mysql mysqli
+# docker build -t frontendbta .
+# docker run --name webappbta -d -p 8181:80 frontendbta

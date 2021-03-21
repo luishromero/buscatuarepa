@@ -1,22 +1,48 @@
-version: "3.0"
+version: "3.7"
 services:
-  mysqlbta:
+  btadb:
     build:
       context: backend/db
       dockerfile: Dockerfile
+    networks:
+      - backend
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=buscatuarepa
+    restart: always
+  apibta:
+    build:
+      context: backend/api
+      dockerfile: Dockerfile
+    networks:
+      - backend
+      - frontend
     ports:
       - "8080:8080"
     environment:
-      - MYSQL_USER=docker
-      - MYSQL_ROOT_PASSWORD=docker
-      - MYSQL_DATABASE=buscatuarepa
+      - DATASOURCE_USERNAME=docker
+      - DATASOURCE_PASSWORD=docker
+      - DATASOURCE_IP=btadb
+      - DATASOURCE_PORT=5432
+      - DATASOURCE_DATABASE=buscatuarepa
+    depends_on:
+      - btadb
     restart: on-failure
   webappbta:
     build:
       context: frontend
       dockerfile: Dockerfile
+    networks:
+      - frontend
     ports:
       - "8181:80"
     depends_on:
-      - "mysqlbta"
+      - btadb
+      - apibta
     restart: on-failure
+networks:
+  backend: {}
+  frontend: {}

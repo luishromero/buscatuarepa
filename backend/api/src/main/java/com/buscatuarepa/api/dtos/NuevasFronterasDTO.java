@@ -9,8 +9,6 @@ public class NuevasFronterasDTO {
   private String direccion;
   private String tipoContacto;
   private String contacto;
-  private String correoUser;
-  private String obs;
 
   public String getPais() {
     return pais;
@@ -68,19 +66,4 @@ public class NuevasFronterasDTO {
     this.contacto = contacto;
   }
 
-  public String getCorreoUser() {
-    return correoUser;
-  }
-
-  public void setCorreoUser(String correoUser) {
-    this.correoUser = correoUser;
-  }
-
-  public String getObs() {
-    return obs;
-  }
-
-  public void setObs(String obs) {
-    this.obs = obs;
-  }
 }
