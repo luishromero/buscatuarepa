@@ -64,6 +64,12 @@ public class BuscatuArepaService {
   @Autowired
   NuevasFronterasRepository nuevasFronterasRepository;
 
+  /**
+   * Get a geojson of the locals from a given city
+   * 
+   * @param city
+   * @return A geojson object
+   */
   public JSONObject getLocals(String city) {
 
     List<LocalDTO> localList = new ArrayList<>();
@@ -141,6 +147,12 @@ public class BuscatuArepaService {
     return geojson;
   }
 
+  /**
+   * Get a json list of delivery from a given city
+   * 
+   * @param city
+   * @return A json list
+   */
   public JSONArray getDelivery(String city) {
     List<DeliveryDTO> deliveryList = new ArrayList<>();
     if (city.equals(Constant.BUENOSAIRESTABLE)) {
@@ -194,6 +206,11 @@ public class BuscatuArepaService {
     return response;
   }
 
+  /**
+   * Save the suggeston to edit a given local o delivery
+   * 
+   * @param editionDTO
+   */
   public void saveEdition(EditionDTO editionDTO) {
 
     if (editionDTO.getPais().equals(Constant.ARGENTINA)) {
@@ -279,6 +296,11 @@ public class BuscatuArepaService {
     edicionUruguayRepository.saveAndFlush(editionUruguay);
   }
 
+  /**
+   * Save the suggestion of a new local o delivery
+   * 
+   * @param suggestionDTO
+   */
   public void saveSuggestion(SuggestionDTO suggestionDTO) {
     if (suggestionDTO.getPais().equals(Constant.ARGENTINA)) {
       saveSuggestionArgentina(suggestionDTO);
